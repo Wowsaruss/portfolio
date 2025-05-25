@@ -3,11 +3,15 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 
-const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
+const inter = Inter({ 
+  subsets: ['latin'],
+  variable: '--font-inter',
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
-  title: 'Russell Hayes - Software Engineer',
-  description: 'Software Engineer specializing in full-stack development and cloud architecture',
+  title: 'Russell Hayes - Software Development Engineer',
+  description: 'Software Development Engineer specializing in cloud architecture and full-stack development at Amazon Web Services',
 }
 
 export default function RootLayout({
@@ -16,8 +20,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${inter.variable}`}>
-      <body className="bg-white dark:bg-gray-900 text-gray-900 dark:text-white">
+    <html lang="en" className={`${inter.variable} scroll-smooth`}>
+      <body className="bg-white dark:bg-gray-900 text-gray-900 dark:text-white antialiased">
         {children}
       </body>
     </html>
