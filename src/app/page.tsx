@@ -15,7 +15,7 @@ export default function Home() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
-          className="text-2xl font-bold text-gray-900 dark:text-white"
+          className="text-2xl font-bold text-gray-900 dark:text-white font-mono"
         >
           <span>R</span>
           <span className="text-lime-500">/</span>
@@ -32,7 +32,7 @@ export default function Home() {
         >
           {/* Main Content */}
           <div className="space-y-6">
-            <h1 className="text-4xl font-bold text-lime-500 tracking-tight">
+            <h1 className="text-4xl font-bold text-lime-500 tracking-tight font-mono">
               Russell Hayes
             </h1>
             <p className="text-lg text-gray-600 dark:text-gray-400 font-normal">

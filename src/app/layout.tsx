@@ -1,19 +1,24 @@
 import React from 'react'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Outfit, JetBrains_Mono } from 'next/font/google'
 import './globals.css'
 import ThemeToggle from '../components/ThemeToggle'
 import { ThemeProvider } from '../components/ThemeProvider'
 
-const inter = Inter({ 
+const outfit = Outfit({ 
   subsets: ['latin'],
-  variable: '--font-inter',
+  variable: '--font-outfit',
   display: 'swap',
 })
 
+const jetbrainsMono = JetBrains_Mono({ 
+  subsets: ['latin'],
+  variable: '--font-jetbrains-mono',
+})
+
 export const metadata: Metadata = {
-  title: 'R/H',
-  description: 'Russell Hayes - Full Stack Software Engineer',
+  title: 'Russell Hayes',
+  description: 'Software Engineer Portfolio',
 }
 
 export default function RootLayout({
@@ -22,7 +27,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${inter.variable} antialiased`}>
+    <html lang="en" className={`${outfit.variable} ${jetbrainsMono.variable} font-sans antialiased`}>
       <body className="bg-white dark:bg-black text-gray-900 dark:text-white selection:bg-gray-200 dark:selection:bg-gray-800">
         <ThemeProvider>
           <ThemeToggle />
