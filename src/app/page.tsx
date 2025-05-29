@@ -4,6 +4,7 @@
 
 import React from 'react'
 import { motion } from 'framer-motion'
+import WorkHistory from '../components/WorkHistory'
 
 export default function Home() {
   return (
@@ -48,6 +49,9 @@ export default function Home() {
               ))}
             </div>
           </div>
+
+          {/* Work History */}
+          <WorkHistory />
 
           {/* Footer */}
           <div className="pt-8 text-sm text-gray-500 dark:text-gray-500 font-normal">
