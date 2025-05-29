@@ -2,6 +2,8 @@ import React from 'react'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
+import ThemeToggle from '../components/ThemeToggle'
+import { ThemeProvider } from '../components/ThemeProvider'
 
 const inter = Inter({ 
   subsets: ['latin'],
@@ -10,8 +12,8 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'Russell Hayes - Software Development Engineer',
-  description: 'Software Development Engineer specializing in cloud architecture and full-stack development at Amazon Web Services',
+  title: 'R/H',
+  description: 'Russell Hayes - Full Stack Software Engineer',
 }
 
 export default function RootLayout({
@@ -20,9 +22,12 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${inter.variable} scroll-smooth`}>
-      <body className="bg-white dark:bg-gray-900 text-gray-900 dark:text-white antialiased">
-        {children}
+    <html lang="en" className={`${inter.variable} antialiased`}>
+      <body className="bg-white dark:bg-black text-gray-900 dark:text-white selection:bg-gray-200 dark:selection:bg-gray-800">
+        <ThemeProvider>
+          <ThemeToggle />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   )
