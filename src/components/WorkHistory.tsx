@@ -43,7 +43,7 @@ export default function WorkHistory() {
               <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-4">
                 <div>
                   <h3 className="text-xl font-semibold">{job.role}</h3>
-                  <p className="text-primary dark:text-primary/80">{job.company}</p>
+                  <p className="text-lime-500">{job.company}</p>
                 </div>
                 <p className="text-sm text-gray-600 dark:text-gray-400">{job.period}</p>
               </div>
