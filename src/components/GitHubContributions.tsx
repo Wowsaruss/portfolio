@@ -23,16 +23,6 @@ const GitHubContributions = () => {
           }}
         />
       </div>
-      <div className="flex justify-center">
-        <a
-          href="https://github.com/Wowsaruss"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-lime-500 hover:text-lime-400 transition-colors duration-200"
-        >
-          View GitHub Profile →
-        </a>
-      </div>
     </div>
   );
 };

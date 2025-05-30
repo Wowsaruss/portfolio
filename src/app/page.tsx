@@ -75,6 +75,16 @@ export default function Home() {
           <WorkHistory />
 
           {/* Footer */}
+          <div className="flex justify-center">
+            <a
+              href="https://github.com/Wowsaruss"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-lime-500 hover:text-lime-400 transition-colors duration-200"
+            >
+              View GitHub Profile →
+            </a>
+          </div>
           <div className="pt-8 text-sm text-gray-500 dark:text-gray-500 font-normal">
             <p>© {new Date().getFullYear()} - Russell Hayes</p>
             <p className="mt-2">Built with Next.js & Tailwind CSS • Hosted on Vercel</p>
