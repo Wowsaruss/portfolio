@@ -7,6 +7,7 @@ import { motion } from 'framer-motion'
 import WorkHistory from '../components/WorkHistory'
 import TypeWriter from '../components/TypeWriter'
 import Image from 'next/image'
+import GitHubContributions from '../components/GitHubContributions'
 
 export default function Home() {
   return (
@@ -69,6 +70,9 @@ export default function Home() {
 
           {/* Work History */}
           <WorkHistory />
+
+          {/* GitHub Contributions */}
+          <GitHubContributions />
 
           {/* Footer */}
           <div className="pt-8 text-sm text-gray-500 dark:text-gray-500 font-normal">
