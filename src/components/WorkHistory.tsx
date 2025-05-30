@@ -5,15 +5,15 @@ const workHistory = [
     company: "SmartRent",
     role: "Software Engineer II",
     period: "2020 - 2025",
-    description: "Led development of key features and improvements. Collaborated with cross-functional teams to deliver high-quality software solutions.",
-    technologies: ["React", "TypeScript", "Elixir", "Node.js", "PostgreSQL", "Git", "Datadog", "Jira"]
+    description: "Built and scaled core customer-facing apps using React, Elixir, Node.js, and PostgreSQL. Led full product lifecycles from concept to deployment, integrated third-party APIs, and improved system performance with background jobs and observability tools like Datadog.",
+    technologies: ["React", "TypeScript", "Elixir", "Node.js", "PostgreSQL", "Redis", "Git", "Datadog", "Jira"]
   },
   {
     company: "SIBI",
     role: "Software Engineer",
     period: "2018 - 2020",
-    description: "Developed and maintained web applications. Implemented responsive designs and optimized application performance.",
-    technologies: ["React", "TypeScript", "Node.js", "Go", "GraphQL", "PostgreSQL", "MongoDB", "Docker", "Git", "Datadog"]
+    description: "Helped re-architect the backend from REST/SQL to GraphQL/MongoDB. Built scalable microservices with Node.js, Go, and Docker. Designed APIs, improved testing coverage, and worked closely with clients to deliver secure and flexible integrations.",
+    technologies: ["React", "TypeScript", "Node.js", "Go", "GraphQL", "Redis", "RabbitMQ", "PostgreSQL", "MongoDB", "Docker", "Git", "Datadog"]
   }
 ];
 
