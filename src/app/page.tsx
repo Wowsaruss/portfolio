@@ -37,7 +37,7 @@ export default function Home() {
             <div className="flex items-center gap-8">
               <div className="relative w-72 h-72 rounded-full overflow-hidden">
                 <Image
-                  src="/me-2.png"
+                  src="/me-1.png"
                   alt="Russell Hayes"
                   fill
                   className="object-cover"
