@@ -22,11 +22,12 @@ module.exports = {
       },
       fontFamily: {
         sans: ['var(--font-outfit)'],
-        mono: ['var(--font-jetbrains-mono)'],
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-in-out',
         'slide-up': 'slideUp 0.5s ease-out',
+        'typing': 'typing 3.5s steps(40, end)',
+        'blink': 'blink 0.75s step-end infinite',
       },
       keyframes: {
         fadeIn: {
@@ -36,6 +37,14 @@ module.exports = {
         slideUp: {
           '0%': { transform: 'translateY(20px)', opacity: '0' },
           '100%': { transform: 'translateY(0)', opacity: '1' },
+        },
+        typing: {
+          'from': { width: '0' },
+          'to': { width: '100%' },
+        },
+        blink: {
+          'from, to': { borderColor: 'transparent' },
+          '50%': { borderColor: 'currentColor' },
         },
       },
     },

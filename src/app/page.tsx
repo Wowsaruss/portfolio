@@ -5,6 +5,8 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import WorkHistory from '../components/WorkHistory'
+import TypeWriter from '../components/TypeWriter'
+import Image from 'next/image'
 
 export default function Home() {
   return (
@@ -15,7 +17,7 @@ export default function Home() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
-          className="text-2xl font-bold text-gray-900 dark:text-white font-mono"
+          className="text-2xl font-bold text-gray-900 dark:text-white font-martian-mono"
         >
           <span>R</span>
           <span className="text-lime-500">/</span>
@@ -23,7 +25,7 @@ export default function Home() {
         </motion.h1>
       </div>
 
-      <div className="max-w-xl mx-auto px-4 py-16">
+      <div className="max-w-2xl mx-auto px-4 py-16">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -32,25 +34,26 @@ export default function Home() {
         >
           {/* Main Content */}
           <div className="space-y-6">
-            <h1 className="text-4xl font-bold text-lime-500 tracking-tight font-mono">
-              Russell Hayes
-            </h1>
-            <p className="text-lg text-gray-600 dark:text-gray-400 font-normal">
-              Full Stack Software Engineer who likes building stuff with
-            </p>
-          </div>
-
-          {/* Tech Stack */}
-          <div className="space-y-6">
-            <div className="grid grid-cols-2 gap-4">
-              {['TypeScript', 'React', 'Node.js', 'AWS', 'Elixir', 'Go', 'PostgreSQL', 'MongoDB', 'Docker', 'Git', 'Datadog', 'Jira'].map((skill) => (
-                <div
-                  key={skill}
-                  className="text-base text-gray-600 dark:text-gray-400 font-normal"
-                >
-                  {skill}
+            <div className="flex items-center gap-8">
+              <div className="relative w-72 h-72 rounded-full overflow-hidden">
+                <Image
+                  src="/me-2.png"
+                  alt="Russell Hayes"
+                  fill
+                  className="object-cover"
+                  priority
+                />
+              </div>
+              <div>
+                <h1 className="text-7xl font-bold text-lime-500 tracking-tight font-martian-mono">
+                  Russell Hayes
+                </h1>
+                <div className="max-w-4xl">
+                  <h1 className="text-4xl font-bold mb-4">
+                    Full Stack Software Engineer who likes building stuff with <TypeWriter words={['TypeScript', 'React', 'Node.js', 'Elixir', 'Go', 'GraphQL', 'PostgreSQL', 'MongoDB', 'Docker', 'AWS', 'Git', 'Datadog']} className="text-primary" />
+                  </h1>
                 </div>
-              ))}
+              </div>
             </div>
           </div>
 

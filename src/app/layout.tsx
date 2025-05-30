@@ -1,6 +1,6 @@
 import React from 'react'
 import type { Metadata } from 'next'
-import { Outfit, JetBrains_Mono } from 'next/font/google'
+import { Outfit, Martian_Mono } from 'next/font/google'
 import './globals.css'
 import ThemeToggle from '../components/ThemeToggle'
 import { ThemeProvider } from '../components/ThemeProvider'
@@ -11,9 +11,10 @@ const outfit = Outfit({
   display: 'swap',
 })
 
-const jetbrainsMono = JetBrains_Mono({ 
+const martianMono = Martian_Mono({ 
   subsets: ['latin'],
-  variable: '--font-jetbrains-mono',
+  variable: '--font-martian-mono',
+  weight: ['400', '500', '600', '700', '800'],
 })
 
 export const metadata: Metadata = {
@@ -27,7 +28,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${outfit.variable} ${jetbrainsMono.variable} font-sans antialiased`}>
+    <html lang="en" className={`${outfit.variable} ${martianMono.variable} font-sans antialiased`}>
       <body className="bg-white dark:bg-black text-gray-900 dark:text-white selection:bg-gray-200 dark:selection:bg-gray-800">
         <ThemeProvider>
           <ThemeToggle />
