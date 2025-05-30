@@ -25,6 +25,7 @@ export default function Home() {
         </motion.h1>
       </div>
 
+      {/* Main Content */}
       <div className="max-w-2xl mx-auto px-4 py-16">
         <motion.div
           initial={{ opacity: 0 }}
@@ -32,7 +33,6 @@ export default function Home() {
           transition={{ duration: 0.5 }}
           className="space-y-16"
         >
-          {/* Main Content */}
           <div className="space-y-6">
             <div className="flex items-center gap-8">
               <div className="relative w-72 h-72 rounded-full overflow-hidden">
@@ -50,8 +50,18 @@ export default function Home() {
                 </h1>
                 <div className="max-w-4xl">
                   <h1 className="text-4xl font-bold mb-4">
-                    Full Stack Software Engineer who likes building stuff with <TypeWriter words={['TypeScript', 'React', 'Node.js', 'Elixir', 'Go', 'GraphQL', 'PostgreSQL', 'MongoDB', 'Docker', 'AWS', 'Git', 'Datadog']} className="text-primary" />
+                    Full Stack Software Engineer who likes building stuff with <TypeWriter words={['TypeScript', 'React', 'Node.js', 'Elixir', 'GoLang', 'GraphQL', 'PostgreSQL', 'MongoDB', 'Docker', 'AWS', 'Git', 'Datadog']} className="text-primary" />
                   </h1>
+                  <a
+                    href="/2025Resume.pdf"
+                    download
+                    className="inline-flex items-center gap-2 px-6 py-3 bg-lime-500 text-black font-medium rounded-lg hover:bg-lime-400 transition-colors duration-200"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                    </svg>
+                    Download Resume
+                  </a>
                 </div>
               </div>
             </div>
@@ -63,7 +73,7 @@ export default function Home() {
           {/* Footer */}
           <div className="pt-8 text-sm text-gray-500 dark:text-gray-500 font-normal">
             <p>© {new Date().getFullYear()} - Russell Hayes</p>
-            <p className="mt-2">Built with Next.js • Hosted on Vercel</p>
+            <p className="mt-2">Built with Next.js & Tailwind CSS • Hosted on Vercel</p>
           </div>
         </motion.div>
       </div>
