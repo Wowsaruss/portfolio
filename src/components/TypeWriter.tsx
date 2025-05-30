@@ -49,7 +49,7 @@ const TypeWriter: React.FC<TypeWriterProps> = ({ words, className = '' }) => {
   return (
     <span className={`inline-block ${className}`}>
       {currentText}
-      <span className="inline-block w-0.5 h-6 bg-secondary animate-blink" />
+      <span className="inline-block w-3 h-6 bg-gray-900 dark:bg-white animate-blink" />
     </span>
   );
 };
