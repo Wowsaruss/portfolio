@@ -5,20 +5,19 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import WorkHistory from '../components/WorkHistory'
-import TypeWriter from '../components/TypeWriter'
-import Image from 'next/image'
+import Header from '../components/Header'
 import GitHubContributions from '../components/GitHubContributions'
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-white dark:bg-black">
+    <main className="bg-white dark:bg-black">
       {/* Fixed Header */}
-      <div className="fixed top-0 left-0 p-6">
+      <div className="fixed top-0 left-0 p-3 md:p-6 z-50">
         <motion.h1 
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
-          className="text-2xl font-bold text-gray-900 dark:text-white font-martian-mono"
+          className="text-lg md:text-2xl font-bold text-gray-900 dark:text-white font-martian-mono"
         >
           <span>R</span>
           <span className="text-lime-500">/</span>
@@ -26,70 +25,67 @@ export default function Home() {
         </motion.h1>
       </div>
 
-      {/* Main Content */}
-      <div className="max-w-2xl mx-auto px-4 py-16">
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5 }}
-          className="space-y-16"
-        >
-          <div className="space-y-6">
-            <div className="flex items-center gap-8">
-              <div className="relative w-72 h-72 rounded-full overflow-hidden">
-                <Image
-                  src="/me-1.png"
-                  alt="Russell Hayes"
-                  fill
-                  className="object-cover"
-                  priority
-                />
-              </div>
-              <div>
-                <h1 className="text-7xl font-bold text-lime-500 tracking-tight font-martian-mono">
-                  Russell Hayes
-                </h1>
-                <div className="max-w-4xl">
-                  <h1 className="text-4xl font-bold mb-4">
-                    Full Stack Software Engineer who likes building stuff with <TypeWriter words={['TypeScript', 'React', 'Node.js', 'Elixir', 'GoLang', 'GraphQL', 'PostgreSQL', 'MongoDB', 'Docker', 'AWS', 'Git', 'Datadog']} className="text-primary" />
-                  </h1>
-                  <a
-                    href="/2025Resume.pdf"
-                    download
-                    className="inline-flex items-center gap-2 px-6 py-3 bg-lime-500 text-black font-medium rounded-lg hover:bg-lime-400 transition-colors duration-200"
-                  >
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
-                    </svg>
-                    Download Resume
-                  </a>
-                </div>
+      {/* Scrollable Sections */}
+      <div className="snap-container">
+        {/* Header Section */}
+        <section className="snap-section">
+          <div className="parallax-bg bg-gradient-to-b from-lime-500/5 to-transparent" />
+          <div className="parallax-content">
+            <Header />
+          </div>
+        </section>
+
+        {/* Work History Section */}
+        <section className="snap-section min-h-screen relative">
+          <div className="parallax-bg bg-gradient-to-b from-transparent to-lime-500/5" />
+          <div className="parallax-content w-full h-full flex flex-col">
+            <div className="flex-1 flex items-start justify-center overflow-y-auto py-4 md:py-8">
+              <div className="w-full max-w-3xl mx-auto px-4 sm:px-6">
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.5 }}
+                  className="w-full"
+                >
+                  <WorkHistory />
+                </motion.div>
               </div>
             </div>
           </div>
+        </section>
 
-          {/* GitHub Contributions */}
-          <GitHubContributions />
-
-          {/* Work History */}
-          <WorkHistory />
-
-          {/* Footer */}
-          <div className="flex justify-center">
-            <a
-              href="https://github.com/Wowsaruss"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-lime-500 hover:text-lime-400 transition-colors duration-200"
-            >
-              View GitHub Profile →
-            </a>
+        {/* Footer Section */}
+        <section className="snap-section min-h-screen relative">
+          <div className="parallax-bg bg-gradient-to-b from-lime-500/5 to-transparent" />
+          <div className="parallax-content w-full h-full flex flex-col">
+            {/* GitHub Contributions - Centered */}
+            <div className="flex-1 flex items-center justify-center px-2 sm:px-4">
+              <div className="w-full max-w-3xl mx-auto py-6 md:py-12">
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.5 }}
+                  className="w-full"
+                >
+                  <GitHubContributions />
+                </motion.div>
+              </div>
+            </div>
+            
+            {/* Copyright - Bottom */}
+            <div className="w-full px-4 pb-4 md:pb-8">
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.5 }}
+                className="text-xs sm:text-sm text-gray-500 dark:text-gray-500 font-normal text-center"
+              >
+                <p>© {new Date().getFullYear()} - Russell Hayes</p>
+                <p className="mt-1 sm:mt-2">Built with Next.js & Tailwind CSS • Hosted on Vercel</p>
+              </motion.div>
+            </div>
           </div>
-          <div className="pt-8 text-sm text-gray-500 dark:text-gray-500 font-normal">
-            <p>© {new Date().getFullYear()} - Russell Hayes</p>
-            <p className="mt-2">Built with Next.js & Tailwind CSS • Hosted on Vercel</p>
-          </div>
-        </motion.div>
+        </section>
       </div>
     </main>
   )

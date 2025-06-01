@@ -1,0 +1,40 @@
+import React from 'react';
+import { motion } from 'framer-motion';
+import Image from 'next/image';
+import TypeWriter from './TypeWriter';
+import SocialLinks from './SocialLinks';
+
+const Header = () => {
+  return (
+    <div className="min-h-screen flex items-center justify-center px-4">
+      <div className="max-w-4xl w-full space-y-6">
+        <div className="flex flex-col md:flex-row items-center gap-8">
+          <div className="relative w-48 h-48 md:w-72 md:h-72 rounded-full overflow-hidden">
+            <Image
+              src="/me-1.png"
+              alt="Russell Hayes"
+              fill
+              className="object-cover"
+              priority
+            />
+          </div>
+          <div className="text-center md:text-left">
+            <h1 className="text-5xl md:text-7xl font-bold text-lime-500 tracking-tight font-martian-mono">
+              Russell Hayes
+            </h1>
+            <div className="max-w-2xl">
+              <h1 className="text-2xl md:text-4xl font-bold mb-4">
+                Full Stack Software Engineer who likes building stuff with <TypeWriter words={['TypeScript', 'React', 'Node.js', 'Elixir', 'GoLang', 'GraphQL', 'PostgreSQL', 'MongoDB', 'Docker', 'AWS', 'Git', 'Datadog']} className="text-primary" />
+              </h1>
+              <div className="flex flex-col items-center md:items-start gap-4">
+                <SocialLinks />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Header; 

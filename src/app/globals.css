@@ -15,4 +15,47 @@
 body {
   color: rgb(var(--foreground-rgb));
   background: rgb(var(--background-rgb));
+  overflow-x: hidden;
+}
+
+/* Scroll Snap */
+.snap-container {
+  scroll-snap-type: y mandatory;
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+.snap-section {
+  scroll-snap-align: start;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Parallax */
+.parallax-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  transform: translateZ(-1px) scale(2);
+}
+
+.parallax-content {
+  position: relative;
+  z-index: 1;
+  transform: translateZ(0);
+}
+
+/* Hide scrollbar but keep functionality */
+.snap-container::-webkit-scrollbar {
+  display: none;
+}
+
+.snap-container {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
