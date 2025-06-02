@@ -19,7 +19,14 @@ const Header = () => {
               src="/me-1.png"
               alt="Russell Hayes"
               fill
-              className="object-cover"
+              className="object-cover dark:hidden"
+              priority
+            />
+            <Image
+              src="/me-3.png"
+              alt="Russell Hayes"
+              fill
+              className="object-cover hidden dark:block"
               priority
             />
           </motion.div>
