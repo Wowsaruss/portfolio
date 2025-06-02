@@ -53,8 +53,8 @@ export default function Home() {
             <div className="parallax-bg bg-gray-100 dark:bg-gray-800 clip-diagonal" />
             <div className="parallax-content w-full h-full flex flex-col">
               {/* GitHub Contributions - Centered */}
-              <div className="flex-1 flex items-center justify-center px-2 sm:px-4">
-                <div className="w-full max-w-3xl mx-auto py-6 md:py-12">
+              <div className="flex-1 flex items-center justify-center px-4 sm:px-8 md:px-12">
+                <div className="w-full max-w-[1300px] mx-auto py-6 md:py-12">
                   <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
