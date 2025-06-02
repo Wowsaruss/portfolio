@@ -20,8 +20,18 @@ export default function Home() {
         <div className="snap-container">
           {/* Header Section */}
           <section className="snap-section">
-            <div className="parallax-bg bg-lime-500/10 dark:bg-lime-500/20" />
-            <div className="parallax-bg bg-white dark:bg-black clip-diagonal" />
+            <motion.div 
+              initial={{ opacity: 0, y: 100 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              className="parallax-bg bg-lime-500/10 dark:bg-lime-500/20" 
+            />
+            <motion.div 
+              initial={{ opacity: 0, y: 100 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+              className="parallax-bg bg-white dark:bg-black clip-diagonal" 
+            />
             <div className="parallax-content">
               <Header />
             </div>
@@ -29,8 +39,18 @@ export default function Home() {
 
           {/* Work History Section */}
           <section className="snap-section min-h-screen">
-            <div className="parallax-bg bg-gray-100 dark:bg-gray-800" />
-            <div className="parallax-bg bg-lime-500/10 dark:bg-lime-500/20 clip-diagonal-reverse" />
+            <motion.div 
+              initial={{ opacity: 0, y: 100 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              className="parallax-bg bg-gray-100 dark:bg-gray-800" 
+            />
+            <motion.div 
+              initial={{ opacity: 0, y: 100 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+              className="parallax-bg bg-lime-500/10 dark:bg-lime-500/20 clip-diagonal-reverse" 
+            />
             <div className="parallax-content w-full h-full flex flex-col">
               <div className="flex-1 flex items-start justify-center overflow-y-auto py-4 md:py-8">
                 <div className="w-full max-w-3xl mx-auto px-4 sm:px-6">
@@ -49,8 +69,18 @@ export default function Home() {
 
           {/* Footer Section */}
           <section className="snap-section min-h-screen">
-            <div className="parallax-bg bg-lime-500/10 dark:bg-lime-500/20" />
-            <div className="parallax-bg bg-gray-100 dark:bg-gray-800 clip-diagonal" />
+            <motion.div 
+              initial={{ opacity: 0, y: 100 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              className="parallax-bg bg-lime-500/10 dark:bg-lime-500/20" 
+            />
+            <motion.div 
+              initial={{ opacity: 0, y: 100 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+              className="parallax-bg bg-gray-100 dark:bg-gray-800 clip-diagonal" 
+            />
             <div className="parallax-content w-full h-full flex flex-col">
               {/* GitHub Contributions - Centered */}
               <div className="flex-1 flex items-center justify-center px-4 sm:px-8 md:px-12">
