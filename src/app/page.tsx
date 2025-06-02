@@ -10,6 +10,35 @@ import GitHubContributions from '../components/GitHubContributions'
 import ParallaxContainer from '../components/ParallaxContainer'
 import LogoHeader from '../components/LogoHeader'
 
+const ScrollArrow = ({ sectionIndex }: { sectionIndex: number }) => {
+  const handleClick = () => {
+    const sections = document.querySelectorAll('.snap-section');
+    if (sectionIndex < sections.length - 1) {
+      sections[sectionIndex + 1].scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: -10 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: 1 }}
+      className="absolute bottom-8 left-1/2 transform -translate-x-1/2 cursor-pointer hover:scale-110 transition-transform"
+      onClick={handleClick}
+    >
+      <motion.div
+        animate={{ y: [0, 10, 0] }}
+        transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+        className="text-gray-500 dark:text-gray-400"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-10 h-10">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3" />
+        </svg>
+      </motion.div>
+    </motion.div>
+  );
+};
+
 export default function Home() {
   return (
     <main className="bg-white dark:bg-black">
@@ -34,6 +63,7 @@ export default function Home() {
             />
             <div className="parallax-content">
               <Header />
+              <ScrollArrow sectionIndex={0} />
             </div>
           </section>
 
@@ -64,6 +94,7 @@ export default function Home() {
                   </motion.div>
                 </div>
               </div>
+              <ScrollArrow sectionIndex={1} />
             </div>
           </section>
 
