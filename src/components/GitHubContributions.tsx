@@ -1,12 +1,33 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import GitHubCalendar from 'react-github-calendar';
 
 const GitHubContributions = () => {
   return (
     <div className="space-y-4 w-full">
-      <h2 className="text-2xl font-bold text-gray-900 dark:text-white">GitHub Contributions</h2>
-      <div className="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg w-full">
-        <div className="w-full">
+      <motion.h2 
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+        className="text-2xl font-bold text-gray-900 dark:text-white"
+      >
+        GitHub Contributions
+      </motion.h2>
+      <motion.div 
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+        className="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg w-full"
+      >
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+          className="w-full"
+        >
           <GitHubCalendar
             username="Wowsaruss"
             colorScheme="light"
@@ -31,8 +52,8 @@ const GitHubContributions = () => {
               width: '100%',
             } as React.CSSProperties}
           />
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </div>
   );
 };
