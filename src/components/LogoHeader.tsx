@@ -9,7 +9,7 @@ export default function LogoHeader() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
-        className="text-lg md:text-2xl font-bold text-gray-900 dark:text-white font-martian-mono"
+        className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white font-martian-mono"
       >
         <span>R</span>
         <span className="text-lime-500">/</span>
