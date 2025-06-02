@@ -28,7 +28,7 @@ const Header = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-5xl md:text-7xl font-bold text-lime-500 tracking-tight font-martian-mono"
+              className="text-5xl md:text-7xl font-bold text-lime-500 dark:text-orange-500 tracking-tight font-martian-mono"
             >
               Russell Hayes
             </motion.h1>
@@ -39,7 +39,7 @@ const Header = () => {
                 transition={{ duration: 0.5, delay: 0.4 }}
                 className="text-2xl md:text-4xl font-bold mb-4"
               >
-                Full Stack Software Engineer who likes building stuff with <TypeWriter words={['TypeScript', 'React', 'Node.js', 'Elixir', 'GoLang', 'GraphQL', 'PostgreSQL', 'MongoDB', 'Docker', 'AWS', 'Git', 'Datadog']} className="text-primary" />
+                Full Stack Software Engineer who likes building stuff with <TypeWriter words={['TypeScript', 'React', 'Node.js', 'Elixir', 'GoLang', 'GraphQL', 'PostgreSQL', 'MongoDB', 'Docker', 'AWS', 'Git', 'Datadog']} className="text-primary dark:text-orange-500" />
               </motion.h1>
               <motion.div 
                 initial={{ opacity: 0, y: 20 }}

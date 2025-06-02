@@ -12,7 +12,7 @@ export default function LogoHeader() {
         className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white font-martian-mono"
       >
         <span>R</span>
-        <span className="text-lime-500">/</span>
+        <span className="text-lime-500 dark:text-orange-500">/</span>
         <span>H</span>
       </motion.h1>
     </div>

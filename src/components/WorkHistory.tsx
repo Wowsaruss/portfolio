@@ -46,7 +46,7 @@ export default function WorkHistory() {
               <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-4">
                 <div>
                   <h3 className="text-xl font-semibold">{job.role}</h3>
-                  <p className="text-lime-500">{job.company}</p>
+                  <p className="text-lime-500 dark:text-orange-500">{job.company}</p>
                 </div>
                 <p className="text-sm text-gray-600 dark:text-gray-400">{job.period}</p>
               </div>
@@ -76,7 +76,7 @@ export default function WorkHistory() {
           <a
             href="/2025Resume.pdf"
             download
-            className="inline-flex items-center gap-2 px-6 py-3 bg-lime-500 text-black font-medium rounded-lg hover:bg-lime-400 transition-colors duration-200 shadow-lg hover:shadow-xl"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-lime-500 dark:bg-orange-500 text-black font-medium rounded-lg hover:bg-lime-400 dark:hover:bg-orange-400 transition-colors duration-200 shadow-lg hover:shadow-xl"
           >
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
               <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />

@@ -24,7 +24,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 100 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
-              className="parallax-bg bg-lime-500/10 dark:bg-lime-500/20" 
+              className="parallax-bg bg-lime-500/10 dark:bg-orange-500/20" 
             />
             <motion.div 
               initial={{ opacity: 0, y: 100 }}
@@ -49,7 +49,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 100 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-              className="parallax-bg bg-lime-500/10 dark:bg-lime-500/20 clip-diagonal-reverse" 
+              className="parallax-bg bg-lime-500/10 dark:bg-orange-500/20 clip-diagonal-reverse" 
             />
             <div className="parallax-content w-full h-full flex flex-col">
               <div className="flex-1 flex items-start justify-center overflow-y-auto py-4 md:py-8">
@@ -73,7 +73,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 100 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
-              className="parallax-bg bg-lime-500/10 dark:bg-lime-500/20" 
+              className="parallax-bg bg-lime-500/10 dark:bg-orange-500/20" 
             />
             <motion.div 
               initial={{ opacity: 0, y: 100 }}
